@@ -1,7 +1,7 @@
 // Problem: https://leetcode.com/problems/implement-queue-using-stacks/
-// Solution:
+// Solution: https://leetcode.com/submissions/detail/1074593424/
 // Runtime: 46 ms, faster than 81.46% of JavaScript online submissions for Two Sum.
-// Memory Usage: 42.3 MB, less than 10.95% of JavaScript online submissions for Two Sum.
+// Memory Usage 41 MB, less than 98.57% of JavaScript online submissions for Two Sum.
 // O(n) time, O(n) space
 // Time to write code:
 
@@ -60,7 +60,7 @@ class MyQueue {
    * @return {number}
    */
   pop() {
-    if (!this.s1.length === 0) return null;
+    if (this.s1.length === 0) return null;
     else if (this.s1.length === 1) {
       return this.s1.pop();
     }
@@ -76,7 +76,7 @@ class MyQueue {
    * @return {number}
    */
   peek() {
-    if (!this.s1.length === 0) return null;
+    if (this.s1.length === 0) return null;
     else if (this.s1.length === 1) {
       return this.s1.peek();
     }
