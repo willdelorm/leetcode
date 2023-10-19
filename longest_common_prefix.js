@@ -2,7 +2,7 @@
 // Solution: https://leetcode.com/submissions/detail/1079469936/
 // Runtime: 39 ms, faster than 99.13% of JavaScript online submissions for Backspace String Compare.
 // Memory Usage: 42.4 MB, less than 48.64% of JavaScript online submissions for Backspace String Compare.
-// O(n^2) time, O(n) space
+// O(n^2) time, O(1) space
 // Time to write code: 45 sec
 /**
  * @param {string[]} strs
