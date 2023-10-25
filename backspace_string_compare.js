@@ -13,13 +13,14 @@ var backspaceCompare = function (s, t) {
   function processString(str) {
     let arr = [];
     for (let i = 0; i < str.length; i++) {
-      if (c === "#") {
+      if (str[i] === "#") {
         arr.pop();
       } else {
-        arr.push(c);
+        arr.push(str[i]);
       }
     }
     return arr.join("");
   }
+
   return processString(s) === processString(t);
 };
