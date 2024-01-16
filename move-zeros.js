@@ -1,7 +1,7 @@
-// Problem: https://leetcode.com/problems/maximum-depth-of-binary-tree/
-// Solution: https://leetcode.com/submissions/detail/1148099561/
-// Runtime: 78 ms, faster than 56.33% of JavaScript online submissions.
-// Memory Usage: 46.8 MB, less than 38.26% of JavaScript online submissions.
+// Problem: https://leetcode.com/problems/move-zeroes/
+// Solution: https://leetcode.com/submissions/detail/1148166822/
+// Runtime: 77 ms, faster than 60.42% of JavaScript online submissions.
+// Memory Usage: 46.38 MB, less than 74.94% of JavaScript online submissions.
 // O(n) time, O(1) space
 
 /**
@@ -9,13 +9,17 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function (nums) {
-  return nums.sort((a, b) => {
-    if (a === 0 && b !== 0) {
-      return 1;
-    } else if (a !== 0 && b === 0) {
-      return -1;
+  if (nums.length < 2) return nums;
+  let zeroCount = 0;
+  nums.forEach((num, i) => {
+    if (num === 0) {
+      zeroCount++;
     } else {
-      return 0;
+      if (zeroCount > 0) {
+        nums[i - zeroCount] = num;
+        nums[i] = 0;
+      }
     }
   });
+  return nums;
 };
